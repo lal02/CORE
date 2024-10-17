@@ -25,7 +25,7 @@ zinseszinsButton.onclick = function (){
 }
 
 currencyConverterButtonHref.onclick = function () {
-    window.location = "currencyConverter.html";
+    window.location = "converter.html";
 }
 
 generateButton.onclick = function (){
