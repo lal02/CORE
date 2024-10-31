@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Hey this is my title</title>
+    <title>Home</title>
 </head>
 <body>
-    <h1>du hund!</h1>
-<p>von hier aus soll man auf alle tools und infoseiten weiterkommen</p>
+<h1>Welcome to the Application</h1>
+
+<nav>
+    <ul>
+        <li><a th:href="@{/finanzrechner}">Finanzrechner</a></li>
+        <li><a th:href="@{/converter}">Converter</a></li>
+        <li><a th:href="@{/wordstorage}">Word Storage</a></li>
+        <li><a th:href="@{/finnishconjugation}">Finnish Conjugation</a></li>
+    </ul>
+</nav>
 </body>
 </html>

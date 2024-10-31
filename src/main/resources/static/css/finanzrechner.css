@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to bottom,deepskyblue,darkgrey,black);
+    background-image: linear-gradient(to bottom,deepskyblue,darkgrey);
     height: 100vh;
 }
 
@@ -14,9 +14,7 @@ div {
     border-style: solid;
     padding: 40px;
 }
-h3{
-    max-width:500px;
-}
+
 
 
 

@@ -8,7 +8,7 @@ public class ZinsesZinsController {
 
     @GetMapping("/finanzrechner")
     public String test(){
-        return "zinseszins";
+        return "finanzrechner";
     }
 
 }

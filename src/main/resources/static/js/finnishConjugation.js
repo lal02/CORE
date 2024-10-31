@@ -21,7 +21,7 @@ const secondPersonPlural = document.getElementById("2pP");
 const thirdPersonPlural = document.getElementById("3pP");
 
 zinseszinsButton.onclick = function (){
-    window.location = "zinseszins.html";
+    window.location = "finanzrechner.html";
 }
 
 currencyConverterButtonHref.onclick = function () {
