@@ -1,13 +1,9 @@
 const tempGraph = document.getElementById("temperatureGraph").getContext('2d');
-//const humidityGraph = document.getElementById('humidityGraph').getContext('2d');
-
 
 async function fetchData(api){
         const response = await fetch(api);
         return await response.json();
 }
-
-
 
 
 async function renderGraph(){
@@ -28,8 +24,8 @@ async function renderGraph(){
             datasets: [{
                 label: 'Temperatur',
                 data: temperatureYValues, // Y-Achsen-Werte
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                borderColor: 'rgba(255, 0, 0, 1)',
                 borderWidth: 1
             }
                 ,
