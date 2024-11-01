@@ -63,6 +63,12 @@ DROPDOWN BUTTON
     display: inline-block;
 }
 
+.dropdownHoverButton img{
+    width: 10px; /* Icon width */
+    height: 10px; /* Icon height */
+    margin-left: 5px; /* Space between text and icon */
+}
+
 .dropdownContent {
     display: none; /* Initially hidden */
     position: absolute;

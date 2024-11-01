@@ -7,7 +7,22 @@
 </head>
 
 <body>
-<h1>Temperatur</h1>
+
+<div class="header">
+    <div class = "headerButtonBar">
+        <button onclick = "location.href='/'">Home</button>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png/" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='converter'" >Currency Converter</button>
+                <button onclick = "location.href='finanzrechner'">Finanzrechner</button>
+                <button onclick = "location.href='finnishConjugation'">Finnish Conjugation</button>
+            </div>
+        </div>
+    </div>
+    <h1>Augsburg Temperatur und Luftfeuchtigkeit Sensordaten</h1>
+</div>
+
 <div class = "graphDiv">
     <canvas id="temperatureGraph" width="700" height="400"></canvas>
 </div>

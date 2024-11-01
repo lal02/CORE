@@ -7,7 +7,7 @@
 
 const inputId = document.getElementById("verbInput");
 const generateButton = document.getElementById("generateButton");
-const currencyConverterButtonHref = document.getElementById("currencyConverterButtonHref");
+//const currencyConverterButtonHref = document.getElementById("currencyConverterButtonHref");
 const zinseszinsButton = document.getElementById("zinsesZinsRechner");
 
 //table
@@ -20,13 +20,13 @@ const firstPersonPlural = document.getElementById("1pP");
 const secondPersonPlural = document.getElementById("2pP");
 const thirdPersonPlural = document.getElementById("3pP");
 
-zinseszinsButton.onclick = function (){
-    window.location = "finanzrechner";
-}
+//zinseszinsButton.onclick = function (){
+  //  window.location = "finanzrechner";
+//}
 
-currencyConverterButtonHref.onclick = function () {
-    window.location.href = "converter";
-}
+//currencyConverterButtonHref.onclick = function () {
+ //   window.location.href = "converter";
+//}
 
 generateButton.onclick = function (){
     generateVerbConjugation(inputId.value);
