@@ -21,11 +21,11 @@ const secondPersonPlural = document.getElementById("2pP");
 const thirdPersonPlural = document.getElementById("3pP");
 
 zinseszinsButton.onclick = function (){
-    window.location = "finanzrechner.html";
+    window.location = "finanzrechner";
 }
 
 currencyConverterButtonHref.onclick = function () {
-    window.location = "converter.html";
+    window.location.href = "converter";
 }
 
 generateButton.onclick = function (){

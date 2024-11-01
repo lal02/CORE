@@ -7,10 +7,8 @@ POST http://localhost:8080/temperature
 Content-Type: application/json
 
 {
-  "value" : 22.0,
-  "timestamp": "2024-10-31T23:07:36"
-
-
+  "value" : 10.3,
+  "timestamp": "2024-11-01T23:10:36"
 }
 
 ###
