@@ -7,18 +7,35 @@
     <link rel="shortcut icon" href="#" />
 </head>
 <body>
+<div class="header">
+    <div class = "headerButtonBar">
+        <button onclick = "location.href='/'">Home</button>
+        <button onclick = "location.href='sensordata'">Sensor Data</button>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png/" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='converter'" >Currency Converter</button>
+                <button onclick = "location.href='finanzrechner'">Finanzrechner</button>
+                <button onclick = "location.href='finnishConjugation'">Finnish Conjugation</button>
+            </div>
+        </div>
+    </div>
+    <h1>Finanzrechner</h1>
+</div>
 
-<h1>Zinsrechner</h1>
-<h3>Zur Berechnung der Rendite bei 1 Jahr Laufzeit</h3>
+
 <div class = "divs">
+    <h1>Zinsrechner</h1>
+    <h3>Zur Berechnung der Rendite bei 1 Jahr Laufzeit</h3>
     Angelegtes Geld in € <input type="number" id="zinsAnlage"/>
     Erwartete Rendite in % p.a. <input type="number" id="zinsRendite"/>
     <button type="button" onclick="zinsRenditeBerechnen()">Berechnen!</button>
     <label id ="zinsErgebnisLabel">Ergebnis: </label>
 </div>
-<h1>Zinseszinsrechner</h1>
-<h3>Zur Berechnung des Endkapitals bei thesaurierendem Anlegen der jährlichen Rendite</h3>
-<div>
+
+<div class = "divs">
+    <h1>Zinseszinsrechner</h1>
+    <h3>Zur Berechnung des Endkapitals bei thesaurierendem Anlegen der jährlichen Rendite</h3>
     Angelegtes Geld in € <input type="number" id="zinsesZinsAnlage"/>
     Erwartete Rendite in % p.a. <input type="number" id="zinsesZinsRendite"/>
     Anlagedauer in Jahre <input type="number" id="anlageDauer"/>

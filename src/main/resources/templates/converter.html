@@ -8,17 +8,21 @@
 <body>
 <div class="header">
     <div class = "headerButtonBar">
-        <button id="finnishConjugationButton">Finnish Conjugation</button>
-        <div class = "dropdown">
-            <button id="toolsButton">Tools</button>
+        <button onclick = "location.href='/'">Home</button>
+        <button onclick = "location.href='sensordata'">Sensor Data</button>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png/" alt = "icon" ></button>
             <div class = "dropdownContent">
-                <button id ="converterHrefButton">Converter</button>
-                <button id ="finanzrechnerHrefButton">Finanzrechner</button>
+                <button onclick = "location.href='converter'" >Currency Converter</button>
+                <button onclick = "location.href='finanzrechner'">Finanzrechner</button>
+                <button onclick = "location.href='finnishConjugation'">Finnish Conjugation</button>
             </div>
         </div>
     </div>
-    <h1>Currency Converter</h1>
+    <h1>Converter</h1>
 </div>
+
+
 </body>
 
 

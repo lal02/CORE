@@ -17,7 +17,6 @@ public class WordStorageController {
 
     @GetMapping("/wordstorage")
     public String wordStorageGetMapping(){
-        System.out.println(finEngService.getFinEngModelById(2L).get());
         return "wordstorage";
     }
 
