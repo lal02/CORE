@@ -1,4 +1,4 @@
-package com.lalbr.learnifyTools.RestController;
+package com.lalbr.learnifyTools.controller;
 
 import com.lalbr.learnifyTools.model.SensorData.HumidityModel;
 import com.lalbr.learnifyTools.model.SensorData.TemperatureModel;
