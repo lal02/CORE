@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lalbr</groupId>
-	<artifactId>learnifyTools</artifactId>
+	<artifactId>CORE</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>learnifyTools</name>
 	<description>my personal website that contains certain tools and other stuff I use often</description>

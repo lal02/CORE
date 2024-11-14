@@ -1,10 +1,10 @@
-package com.lalbr.learnifyTools;
+package com.lalbr.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LearnifyToolsApplicationTests {
+class CORETests {
 
 	@Test
 	void contextLoads() {

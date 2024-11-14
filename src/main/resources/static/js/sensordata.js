@@ -7,12 +7,14 @@ async function fetchData(api){
 
 
 async function renderGraph(){
-    const temperatureData = await fetchData("/api/temperatur");
+    const temperatureData = await fetchData("/api/temperatur/today");
+    temperatureData.sort((a,b)=>new Date(a.timestamp)- new Date(b.timestamp));
     console.log(temperatureData);
     const temperatureLabels = temperatureData.map(data => new Date(data.timestamp).toLocaleString()); // Konvertiert den Timestamp in ein Datum
     const temperatureYValues = temperatureData.map(data => data.value);
 
-    const humidityData = await fetchData("/api/humidity");
+    const humidityData = await fetchData("/api/humidity/today");
+    humidityData.sort((a,b)=>new Date(a.timestamp)- new Date(b.timestamp));
     console.log(humidityData);
     const humidityLabels = humidityData.map(data => new Date(data.timestamp).toLocaleString());
     const humidityYValues = humidityData.map(data => data.value);

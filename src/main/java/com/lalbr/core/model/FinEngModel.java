@@ -1,4 +1,4 @@
-package com.lalbr.learnifyTools.model;
+package com.lalbr.core.model;
 
 import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;

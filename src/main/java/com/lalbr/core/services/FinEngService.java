@@ -1,7 +1,7 @@
-package com.lalbr.learnifyTools.services;
+package com.lalbr.core.services;
 
-import com.lalbr.learnifyTools.model.FinEngModel;
-import com.lalbr.learnifyTools.repository.FinEngRepository;
+import com.lalbr.core.model.FinEngModel;
+import com.lalbr.core.repository.FinEngRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,18 +1,15 @@
-package com.lalbr.learnifyTools.controller;
+package com.lalbr.core.controller;
 
-import com.lalbr.learnifyTools.model.SensorData.HumidityModel;
-import com.lalbr.learnifyTools.model.SensorData.TemperatureModel;
-import com.lalbr.learnifyTools.repository.SensorData.TemperatureRepository;
-import com.lalbr.learnifyTools.services.SensorDataService;
+import com.lalbr.core.model.SensorData.HumidityModel;
+import com.lalbr.core.model.SensorData.TemperatureModel;
+import com.lalbr.core.repository.SensorData.TemperatureRepository;
+import com.lalbr.core.services.SensorDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @Controller
 public class SensorDataController {

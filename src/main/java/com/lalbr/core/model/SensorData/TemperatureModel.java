@@ -1,16 +1,13 @@
-package com.lalbr.learnifyTools.model.SensorData;
+package com.lalbr.core.model.SensorData;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import org.springframework.cglib.core.Local;
 import org.springframework.data.annotation.Id;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "humidity")
-public class HumidityModel {
+@Table(name = "temperature")
+public class TemperatureModel {
 
     @jakarta.persistence.Id
     @Id

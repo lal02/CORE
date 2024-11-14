@@ -1,9 +1,8 @@
-package com.lalbr.learnifyTools.controller;
+package com.lalbr.core.controller;
 
-import com.lalbr.learnifyTools.model.FinEngModel;
-import com.lalbr.learnifyTools.services.FinEngService;
+import com.lalbr.core.model.FinEngModel;
+import com.lalbr.core.services.FinEngService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

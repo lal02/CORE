@@ -1,4 +1,11 @@
 forwarding on button click javascript rework so it works
 
 
+Ideas:
+verlinkungen zu sachen wie github
+projekte page mit doku/vorstellung
+pw generator
+Rezepte dynamisch generieren lassen anhand von thymeleaf template und nur die Daten in DB speichern
+Wetter?
+Mehr Graphen -> 2. esp32 mit eigenem graphen
 

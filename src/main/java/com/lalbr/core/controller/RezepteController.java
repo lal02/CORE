@@ -1,4 +1,4 @@
-package com.lalbr.learnifyTools.controller;
+package com.lalbr.core.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
