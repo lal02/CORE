@@ -11,7 +11,7 @@
 	<groupId>com.lalbr</groupId>
 	<artifactId>CORE</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>learnifyTools</name>
+	<name>CORE</name>
 	<description>my personal website that contains certain tools and other stuff I use often</description>
 	<url/>
 	<licenses>

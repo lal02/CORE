@@ -6,19 +6,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ToolsController {
 
-    @GetMapping("/converter")
+    @GetMapping("/tools/converter")
     public String converterGetMapping() {
-        return "converter";
+        return "/tools/converter";
     }
 
-    @GetMapping("/finanzrechner")
+    @GetMapping("/tools/finanzrechner")
     public String finanzrechnerGetMapping(){
-        return "finanzrechner";
+        return "/tools/finanzrechner";
     }
 
-    @GetMapping("/finnishconjugation")
+    @GetMapping("/tools/finnishconjugation")
     public String finnConjGetMapping(){
-        return "finnishConjugation";
+        return "/tools/finnishConjugation";
     }
 
+    @GetMapping("/tools/gamescalculator")
+    public String gamescalculatorGetMapping(){
+        return "/tools/gamescalculator";
+    }
+    @GetMapping("/tools/passwordgenerator")
+    public String passwordgeneratorGetMapping(){
+        return "/tools/passwordgenerator";
+    }
 }

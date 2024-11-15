@@ -9,3 +9,9 @@ Rezepte dynamisch generieren lassen anhand von thymeleaf template und nur die Da
 Wetter?
 Mehr Graphen -> 2. esp32 mit eigenem graphen
 
+
+
+
+refactor header and footer css one stylesheet for all of them
+
+
