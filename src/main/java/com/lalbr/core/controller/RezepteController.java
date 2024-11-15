@@ -10,9 +10,4 @@ public class RezepteController {
     public String rezepteGetMapping(){
         return "rezepte";
     }
-
-    @GetMapping("/rezepte/pizza")
-    public String pizzaGetMapping(){
-        return "rezepte/pizza";
-    }
 }

@@ -18,7 +18,7 @@ public class ToolsController {
 
     @GetMapping("/tools/finnishconjugation")
     public String finnConjGetMapping(){
-        return "/tools/finnishConjugation";
+        return "finnishconjugation";
     }
 
     @GetMapping("/tools/gamescalculator")
