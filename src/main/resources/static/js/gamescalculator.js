@@ -21,7 +21,7 @@ function calculateRemainingTime(days,hours,minutes){
 
     // wird während dem Boost fertig
     if(remainingTime<0){
-        remainingMinutes = 60-Math.abs(remainingTime/11);
+        remainingMinutes = 60-Math.abs(remainingTime/10);
         remainingHours = remainingMinutes/60;
         if(remainingHours<1){
             // X,xx minutes

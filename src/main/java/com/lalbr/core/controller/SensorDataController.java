@@ -31,7 +31,7 @@ public class  SensorDataController {
         return ResponseEntity.ok(savedModel); // Return the saved model
     }
 
-    @GetMapping("/sensordata")
+    @GetMapping(value={"/sensordata","/sensor","/sensorData","/Sensor","/SensorData","/Sensordata"})
     public String getSensorData() {
         return "sensordata";
     }

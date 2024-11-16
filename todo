@@ -15,11 +15,11 @@ Mehr Graphen -> 2. esp32 mit eigenem graphen
 -----------------------------------------------------------------
 
 Rezepte:
-Id
+
 String Rezeptname
+String Anleitung
 Tags[]: Kochen/Backen/Frühstück/.../Festlich/
 Kategorie: mit Fleisch / ohne Fleisch / Backofen /
 Dauer: schnell lang mittel
 Zutaten[] (String name, String? Menge)
 Image
-String Anleitung

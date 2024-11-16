@@ -1,4 +1,4 @@
-package com.lalbr.core.services;
+package com.lalbr.core.util;
 
 public enum TimeSpan{
 

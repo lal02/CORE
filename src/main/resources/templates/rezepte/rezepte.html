@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"><head>
     <meta charset="UTF-8">
     <title>Rezepte</title>
 </head>
@@ -22,7 +21,14 @@
     </div>
     <h1 style="text-align: center">Rezepte</h1>
 </div>
-<h1>Rezepte</h1>
+
+
+<ul>
+    <li th:each="RezeptModel : ${rezeptList}">
+        <a th:href="@{/rezepte/{id}(id=${RezeptModel.getName()})}" th:text="${RezeptModel.getName()}">Item Name</a>
+    </li>
+</ul>
+
 
 </body>
 <link rel="stylesheet" href="/css/rezepte.css">

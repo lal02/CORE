@@ -1,7 +1,6 @@
 package com.lalbr.core.model.SensorData;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
 
@@ -9,7 +8,6 @@ import java.time.LocalDateTime;
 @Table(name = "humidity")
 public class HumidityModel {
 
-    @jakarta.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Automatically generates the ID
     private int id;
@@ -18,11 +16,6 @@ public class HumidityModel {
     private  Double value;
     @Column(name = "timestamp")
     private  LocalDateTime timestamp;
-
-//    private static int year = timestamp.getYear();
-//    private static int month = timestamp.getMonthValue();
-//    private static int day = timestamp.getDayOfMonth();
-
 
     public Double getValue() {
 
@@ -40,4 +33,9 @@ public class HumidityModel {
     public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
     }
+
+    public int getId() {
+        return id;
+    }
+
 }

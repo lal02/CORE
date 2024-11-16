@@ -4,6 +4,7 @@ import com.lalbr.core.model.SensorData.HumidityModel;
 import com.lalbr.core.model.SensorData.TemperatureModel;
 import com.lalbr.core.repository.SensorData.HumidityRepository;
 import com.lalbr.core.repository.SensorData.TemperatureRepository;
+import com.lalbr.core.util.TimeSpan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

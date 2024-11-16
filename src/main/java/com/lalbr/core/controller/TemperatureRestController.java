@@ -3,7 +3,7 @@ package com.lalbr.core.controller;
 import com.lalbr.core.model.SensorData.HumidityModel;
 import com.lalbr.core.model.SensorData.TemperatureModel;
 import com.lalbr.core.services.SensorDataService;
-import com.lalbr.core.services.TimeSpan;
+import com.lalbr.core.util.TimeSpan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
