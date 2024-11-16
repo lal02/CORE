@@ -5,20 +5,43 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Bauarbeitertrank Rechner</h1>
-<h3>Verbleibende Dauer vom Gebäude eingeben</h3>
-<div class ="inputDiv">
-    <label for="daysInput">Days </label><input id="daysInput" type = "number">
-    <br>
-    <label for="hoursInput">Hours </label><input id="hoursInput" type = "number">
-    <br>
-    <label for="minutesInput">Minutes </label><input id="minutesInput" type = "number">
-    <br>
-    <button id ="calculateButton">calculate</button>
-    <br>
-    <br>
-    <label id="resultLabel"></label>
+<div class="header">
+    <div class = "headerButtonBar">
+        <button onclick = "location.href='/'">Home</button>
+        <button onclick = "location.href='/sensordata'">Sensor Data</button>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='/tools/converter'" >Currency Converter</button>
+                <button onclick = "location.href='/tools/finanzrechner'">Finanzrechner</button>
+                <button onclick = "location.href='/tools/finnishconjugation'">Finnish Conjugation</button>
+                <button onclick = "location.href='/tools/gamescalculator'">Games Calculator</button>
+                <button onclick = "location.href='/tools/passwordgenerator'">Password Generator</button>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center">Games Calculation</h1>
 </div>
+<div style="border-width: 10px;border-color: black;border-style:solid;border-radius:10px">
+    <div style="text-align: center">
+        <h2>Bauarbeitertrank Rechner</h2>
+        <h3>Verbleibende Dauer vom Gebäude eingeben</h3>
+    </div>
+    <div class ="inputDiv">
+        <label for="daysInput">Days </label><input id="daysInput" type = "number">
+        <br>
+        <label for="hoursInput">Hours </label><input id="hoursInput" type = "number">
+        <br>
+        <label for="minutesInput">Minutes </label><input id="minutesInput" type = "number">
+        <br>
+        <button id ="calculateButton">calculate</button>
+        <br>
+        <br>
+        <label id="resultLabel"></label>
+    </div>
+
+</div>
+
 
 
 </body>

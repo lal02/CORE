@@ -5,8 +5,24 @@
     <title>Rezepte</title>
 </head>
 <body>
+<div class="header">
+    <div class = "headerButtonBar">
+        <button onclick = "location.href='/'">Home</button>
+        <button onclick = "location.href='/sensordata'">Sensor Data</button>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='/tools/converter'" >Currency Converter</button>
+                <button onclick = "location.href='/tools/finanzrechner'">Finanzrechner</button>
+                <button onclick = "location.href='/tools/finnishconjugation'">Finnish Conjugation</button>
+                <button onclick = "location.href='/tools/gamescalculator'">Games Calculator</button>
+                <button onclick = "location.href='/tools/passwordgenerator'">Password Generator</button>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center">Rezepte</h1>
+</div>
 <h1>Rezepte</h1>
-<button onclick = "location.href='rezepte/pizza'">pizza</button>
 
 </body>
 <link rel="stylesheet" href="/css/rezepte.css">

@@ -5,9 +5,21 @@ Ideas:
 verlinkungen zu sachen wie github
 projekte page mit doku/vorstellung
 pw generator
+todoliste
+einkaufsliste
 Rezepte dynamisch generieren lassen anhand von thymeleaf template und nur die Daten in DB speichern
 Wetter?
 Mehr Graphen -> 2. esp32 mit eigenem graphen
 
 
+-----------------------------------------------------------------
 
+Rezepte:
+Id
+String Rezeptname
+Tags[]: Kochen/Backen/Frühstück/.../Festlich/
+Kategorie: mit Fleisch / ohne Fleisch / Backofen /
+Dauer: schnell lang mittel
+Zutaten[] (String name, String? Menge)
+Image
+String Anleitung
