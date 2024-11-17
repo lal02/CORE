@@ -2,10 +2,9 @@ package com.lalbr.core.model;
 
 import com.lalbr.core.util.Recipe.RecipeCategory;
 import com.lalbr.core.util.Recipe.RecipeDuration;
-import com.lalbr.core.util.Recipe.RecipeTags;
+import com.lalbr.core.util.Recipe.RecipeTag;
 import jakarta.persistence.*;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 @Entity()
@@ -20,16 +19,25 @@ public class RezeptModel {
     @Column(name = "description")
     private String description;
 
-    //@Enumerated(EnumType.STRING)
-    private ArrayList<RecipeTags> tags;
+    @OneToMany
+    @Column(name = "tags")
+    private ArrayList<RecipeTag> tags;
 
+    @OneToMany
+    @Column(name = "category")
     private ArrayList<RecipeCategory> category;
 
+    @ManyToOne
+    @JoinColumn(name = "duration")
     private RecipeDuration duration;
 
     @Lob
     private byte[] image;
-    //private String image;
+
+    //@OneToMany
+    //@Column(name = "test")
+    //private ArrayList<Ingredient> ingredients;
+    //ingredient = String name , double amount , Einheit einheit
 
 
     public String getDescription() {
