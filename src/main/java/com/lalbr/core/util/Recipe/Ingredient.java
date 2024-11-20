@@ -2,6 +2,8 @@ package com.lalbr.core.util.Recipe;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+
 @Entity
 @Table(name = "recipe_ingredient")
 public class Ingredient {
@@ -15,7 +17,7 @@ public class Ingredient {
     @JoinColumn(name = "food")
     private Food food;
 
-    @Column(name = "ingredient_amount")
+    @Column(name = "amount")
     private double amount;
 
     @ManyToOne
@@ -24,24 +26,10 @@ public class Ingredient {
 
 
 
-
-    public Food getFood() {
-        return food;
-    }
-
-    public void setFood(Food food) {
-        this.food = food;
-    }
-
-
-
-
     public double getAmount() {
         return amount;
     }
-    public Unit getUnit() {
-        return unit;
-    }
+
 
     public void setId(Long id) {
         this.id = id;

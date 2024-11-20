@@ -2,7 +2,7 @@ forwarding on button click javascript rework so it works
 
 
 Ideas:
-verlinkungen zu sachen wie github
+verlinkungen zu sachen wie github im footer wie bei index.html
 projekte page mit doku/vorstellung
 pw generator
 todoliste
@@ -10,6 +10,10 @@ einkaufsliste
 Rezepte dynamisch generieren lassen anhand von thymeleaf template und nur die Daten in DB speichern
 Wetter?
 Mehr Graphen -> 2. esp32 mit eigenem graphen
+Einkaufsliste
+Todoliste
+
+
 
 
 -----------------------------------------------------------------

@@ -1,9 +1,6 @@
 package com.lalbr.core.util.Recipe;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "recipe_food")
@@ -11,6 +8,8 @@ public class Food {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "food_id")
     private Long id;
 
     @Column(name = "food_name")

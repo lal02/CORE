@@ -3,7 +3,7 @@ package com.lalbr.core.util.Recipe;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Recipe_Category")
+@Table(name = "recipe_category")
 public class RecipeCategory {
 
 

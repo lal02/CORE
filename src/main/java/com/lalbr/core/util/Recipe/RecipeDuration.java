@@ -9,6 +9,7 @@ public class RecipeDuration {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "duration_id")
     private Long id;
 
     @Column(name = "duration_name")
