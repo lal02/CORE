@@ -1,6 +1,8 @@
 package com.lalbr.core.controller;
 
 import com.lalbr.core.model.SensorData.HumidityModel;
+import com.lalbr.core.model.SensorData.LightModel;
+import com.lalbr.core.model.SensorData.SoilHumidityModel;
 import com.lalbr.core.model.SensorData.TemperatureModel;
 import com.lalbr.core.repository.SensorData.TemperatureRepository;
 import com.lalbr.core.services.SensorDataService;
@@ -28,6 +30,19 @@ public class  SensorDataController {
         HumidityModel savedModel = sensorDataService.saveHumidityModel(myModel);
         return ResponseEntity.ok(savedModel); // Return the saved model
     }
+
+    @PostMapping("/soilhumidity")
+    public ResponseEntity<SoilHumidityModel> createMyModel(@RequestBody SoilHumidityModel myModel) {
+        SoilHumidityModel savedModel = sensorDataService.saveSoilHumidityModel(myModel);
+        return ResponseEntity.ok(savedModel); // Return the saved model
+    }
+    @PostMapping("/light")
+    public ResponseEntity<LightModel> createMyModel(@RequestBody LightModel myModel) {
+        LightModel savedModel = sensorDataService.saveLightModel(myModel);
+        return ResponseEntity.ok(savedModel); // Return the saved model
+    }
+
+
 
     @GetMapping(value={"/sensordata","/sensor","/sensorData","/Sensor","/SensorData","/Sensordata"})
     public String getSensorData() {

@@ -1,8 +1,12 @@
 package com.lalbr.core.services;
 
 import com.lalbr.core.model.SensorData.HumidityModel;
+import com.lalbr.core.model.SensorData.LightModel;
+import com.lalbr.core.model.SensorData.SoilHumidityModel;
 import com.lalbr.core.model.SensorData.TemperatureModel;
 import com.lalbr.core.repository.SensorData.HumidityRepository;
+import com.lalbr.core.repository.SensorData.LightRepository;
+import com.lalbr.core.repository.SensorData.SoilHumidityRepository;
 import com.lalbr.core.repository.SensorData.TemperatureRepository;
 import com.lalbr.core.util.TimeSpan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +24,12 @@ public class SensorDataService {
 
     @Autowired
     private HumidityRepository humidityRepository;
+
+    @Autowired
+    private SoilHumidityRepository soilHumidityRepository;
+
+    @Autowired
+    private LightRepository lightRepository;
 
     /*
         TEMPERATURE
@@ -70,28 +80,6 @@ public class SensorDataService {
         return humidityRepository.save(humidityModel);
     }
 
-//    public List<HumidityModel> getHumidityDataAll() {
-//        return humidityRepository.findAll();
-//    }
-//
-//    public List<HumidityModel> getHumidityDataToday(){
-//        LocalDateTime todayStart = LocalDate.now().atStartOfDay();
-//        LocalDateTime tomorrowStart = LocalDate.now().plusDays(1).atStartOfDay();
-//        return humidityRepository.findHumidityModelsByTimestampBetween(todayStart,tomorrowStart);
-//    }
-//
-//    public List<HumidityModel> getHumidityDataMonth() {
-//        LocalDateTime thisMonthStart = LocalDate.now().withDayOfMonth(1).atStartOfDay();
-//        LocalDateTime nextMonthStart = LocalDate.now().plusDays(LocalDate.now().lengthOfMonth()+1).atStartOfDay();
-//        return humidityRepository.findHumidityModelsByTimestampBetween(thisMonthStart,nextMonthStart);
-//    }
-//
-//    public List<HumidityModel> getHumidityDataYear() {
-//        LocalDateTime thisYearStart = LocalDate.now().withDayOfYear(1).atStartOfDay();
-//        LocalDateTime nextYearStart = LocalDate.now().withDayOfYear(1).plusYears(1).atStartOfDay();
-//        return humidityRepository.findHumidityModelsByTimestampBetween(thisYearStart,nextYearStart);
-//    }
-
     public List<HumidityModel> getHumidityData(TimeSpan timespan) throws Exception {
 
         LocalDateTime start = null;
@@ -116,7 +104,62 @@ public class SensorDataService {
         return humidityRepository.findHumidityModelsByTimestampBetween(start,end);
     }
 
+    public List<SoilHumidityModel> getSoilHumidityData(TimeSpan timespan) throws Exception {
 
+        LocalDateTime start = null;
+        LocalDateTime end = null;
+
+        switch(timespan){
+            case ALL:
+                return soilHumidityRepository.findAll();
+            case TODAY:
+                start = LocalDate.now().atStartOfDay();
+                end = LocalDate.now().plusDays(1).atStartOfDay();;
+                break;
+            case THIS_MONTH:
+                start = LocalDate.now().withDayOfMonth(1).atStartOfDay();
+                end = LocalDate.now().plusDays(LocalDate.now().lengthOfMonth()+1).atStartOfDay();
+                break;
+            case THIS_YEAR:
+                start = LocalDate.now().withDayOfYear(1).atStartOfDay();
+                end = LocalDate.now().withDayOfYear(1).plusYears(1).atStartOfDay();
+                break;
+        }
+        return soilHumidityRepository.findSoilHumidityModelsByTimestampBetween(start,end);
+    }
+
+    public List<LightModel> getLightData(TimeSpan timespan) throws Exception {
+
+        LocalDateTime start = null;
+        LocalDateTime end = null;
+
+        switch(timespan){
+            case ALL:
+                return lightRepository.findAll();
+            case TODAY:
+                start = LocalDate.now().atStartOfDay();
+                end = LocalDate.now().plusDays(1).atStartOfDay();;
+                break;
+            case THIS_MONTH:
+                start = LocalDate.now().withDayOfMonth(1).atStartOfDay();
+                end = LocalDate.now().plusDays(LocalDate.now().lengthOfMonth()+1).atStartOfDay();
+                break;
+            case THIS_YEAR:
+                start = LocalDate.now().withDayOfYear(1).atStartOfDay();
+                end = LocalDate.now().withDayOfYear(1).plusYears(1).atStartOfDay();
+                break;
+        }
+        return lightRepository.findLightModelsByTimestampBetween(start,end);
+    }
+
+
+    public SoilHumidityModel saveSoilHumidityModel(SoilHumidityModel soilHumidityModel) {
+        return soilHumidityRepository.save(soilHumidityModel);
+    }
+
+    public LightModel saveLightModel(LightModel lightModel) {
+        return lightRepository.save(lightModel);
+    }
 
 
 }

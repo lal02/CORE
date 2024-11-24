@@ -1,6 +1,3 @@
-forwarding on button click javascript rework so it works
-
-
 Ideas:
 verlinkungen zu sachen footer wie bei index.html
 projekte page mit doku/vorstellung
@@ -9,13 +6,13 @@ todoliste
 einkaufsliste
 Rezepte dynamisch generieren lassen anhand von thymeleaf template und nur die Daten in DB speichern
 Wetter?
-Mehr Graphen -> 2. esp32 mit eigenem graphen
+2. esp32 mit eigenen Daten
 Einkaufsliste
 Todoliste
 Bücher Filme und Serien
 
 
-
+DB,Services,Model etc alles refactoren
 -----------------------------------------------------------------
 
 Rezepte:
