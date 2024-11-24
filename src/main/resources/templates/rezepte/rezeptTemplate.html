@@ -6,6 +6,26 @@
 </head>
 <body>
 <h1 th:text="${rezept.getName()}">Rezept Name</h1>
+
+<h3>Tags</h3>
+<p th:text ="${rezept.getTagsAsString()}"></p>
+
+<h3>Kategorien</h3>
+<p th:text ="${rezept.getCategoryAsString()}"></p>
+
+<h3>Dauer</h3>
+<p th:text ="${rezept.getDuration().getName()}"></p>
+
+<h3>Zutaten</h3>
+<p th:utext ="${rezept.getIngredientsAsString()}"></p>
+
+<h3>Mealprep</h3>
+<p th:text ="'Kann man gut vorkochen? - ' + ${rezept.getMealPrepStringGerman()}"></p>
+
+
+<h3>Beschreibung</h3>
 <p th:text="${rezept.getDescription()}">Beschreibung</p>
+
+
 </body>
 </html>

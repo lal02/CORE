@@ -16,8 +16,6 @@ public class  SensorDataController {
 
     @Autowired
     private SensorDataService sensorDataService;
-    @Autowired
-    private TemperatureRepository temperatureRepository;
 
     @PostMapping("/temperature")
     public ResponseEntity<TemperatureModel> createMyModel(@RequestBody TemperatureModel myModel) {

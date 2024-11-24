@@ -28,4 +28,7 @@ public class RezeptService {
 
     public List<Ingredient> findAllIngredientModel() {return ingredientRepository.findAll();}
 
+    public RezeptModel saveRezeptModel(RezeptModel rezeptModel) {
+        return rezeptRepository.save(rezeptModel);
+    }
 }

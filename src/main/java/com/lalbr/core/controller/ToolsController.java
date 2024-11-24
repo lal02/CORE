@@ -29,4 +29,7 @@ public class ToolsController {
     public String passwordgeneratorGetMapping(){
         return "/tools/passwordgenerator";
     }
+
+
+
 }

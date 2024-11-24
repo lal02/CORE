@@ -38,4 +38,11 @@ public class Ingredient {
     public Long getId() {
         return id;
     }
+
+
+    public String toString(){
+
+
+        return amount +" " +  unit.getName() +" " +  food.getName() ;
+    }
 }
