@@ -10,6 +10,9 @@ Wetter?
 Einkaufsliste
 Todoliste
 Bücher Filme und Serien
+deepl wrapper word saver
+line char counter etc
+led panel controller
 
 
 DB,Services,Model etc alles refactoren
@@ -23,4 +26,8 @@ Tags[]: Kochen/Backen/Frühstück/.../Festlich/
 Kategorie: mit Fleisch / ohne Fleisch / Backofen /
 Dauer: schnell lang mittel
 Zutaten[] (String name, String? Menge)
+
+erweitern mit:
 Image
+ergibt N portionen, gesamtkosten, kosten pro portion, Rezept erstellt am, Rezept Quelllink
+
