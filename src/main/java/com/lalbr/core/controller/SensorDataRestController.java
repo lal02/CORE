@@ -24,9 +24,15 @@ public class SensorDataRestController {
         return sensorDataService.getTemperatureData(TimeSpan.ALL);
     }
 
+
     @GetMapping("/api/temperatur/today")
     public List<TemperatureModel> getTemperatureDataToday()throws Exception {
         return sensorDataService.getTemperatureData(TimeSpan.TODAY);
+    }
+
+    @GetMapping("/api/temperatur/week")
+    public List<TemperatureModel> getTemperatureDataWeek()throws Exception {
+        return sensorDataService.getTemperatureData(TimeSpan.WEEK);
     }
 
     @GetMapping("/api/temperatur/month")
@@ -54,6 +60,11 @@ public class SensorDataRestController {
         return sensorDataService.getHumidityData(TimeSpan.TODAY);
     }
 
+    @GetMapping("/api/humidity/week")
+    public List<HumidityModel> getHumidityDataWeek()throws Exception {
+        return sensorDataService.getHumidityData(TimeSpan.WEEK);
+    }
+
     @GetMapping("/api/humidity/month")
     public List<HumidityModel> getHumidityDataMonth() throws Exception {
         return sensorDataService.getHumidityData(TimeSpan.THIS_MONTH);
@@ -76,6 +87,11 @@ public class SensorDataRestController {
         return sensorDataService.getSoilHumidityData(TimeSpan.TODAY);
     }
 
+    @GetMapping("/api/soilhumidity/week")
+    public List<SoilHumidityModel> getSoilHumidityDataWeek()throws Exception {
+        return sensorDataService.getSoilHumidityData(TimeSpan.WEEK);
+    }
+
     @GetMapping("/api/soilhumidity/month")
     public List<SoilHumidityModel> getSoilHumidityDataMonth() throws Exception {
         return sensorDataService.getSoilHumidityData(TimeSpan.THIS_MONTH);
@@ -95,6 +111,11 @@ public class SensorDataRestController {
     @GetMapping("/api/light/today")
     public List<LightModel> getLightDataToday() throws Exception {
         return sensorDataService.getLightData(TimeSpan.TODAY);
+    }
+
+    @GetMapping("/api/light/week")
+    public List<LightModel> getLightDataWeek()throws Exception {
+        return sensorDataService.getLightData(TimeSpan.WEEK);
     }
 
     @GetMapping("/api/light/month")

@@ -3,16 +3,19 @@ const soilGraph = document.getElementById("soilGraph").getContext('2d');
 const lightGraph = document.getElementById("lightGraph").getContext('2d');
 
 const todayButton = document.getElementById("todayButton");
+const weekButton = document.getElementById("weekButton");
 const monthButton = document.getElementById("monthButton");
 const yearButton = document.getElementById("yearButton");
 const alltimeButton = document.getElementById("alltimeButton");
 
 const todaySoilButton = document.getElementById("todaySoilButton");
+const weekSoilButton = document.getElementById("weekSoilButton");
 const monthSoilButton = document.getElementById("monthSoilButton");
 const yearSoilButton = document.getElementById("yearSoilButton");
 const alltimeSoilButton = document.getElementById("alltimeSoilButton");
 
 const todayLightButton = document.getElementById("todayLightButton");
+const weekLightButton = document.getElementById("weekLightButton");
 const monthLightButton = document.getElementById("monthLightButton");
 const yearLightButton = document.getElementById("yearLightButton");
 const alltimeLightButton = document.getElementById("alltimeLightButton");
@@ -26,6 +29,9 @@ let lightSensorGraph;
 
 todayButton.onclick = function () {
     renderTempGraph("today").then(r => null);
+}
+weekButton.onclick = function () {
+    renderTempGraph("week").then(r => null);
 }
 monthButton.onclick = function () {
     renderTempGraph("month").then(r => null);
@@ -41,8 +47,9 @@ alltimeButton.onclick = function () {
 todaySoilButton.onclick = function () {
     renderSoilGraph("today").then(r => null);
 }
-
-
+weekSoilButton.onclick = function () {
+    renderSoilGraph("week").then(r => null);
+}
 monthSoilButton.onclick = function () {
     renderSoilGraph("month").then(r => null);
 }
@@ -60,8 +67,9 @@ alltimeSoilButton.onclick = function () {
 todayLightButton.onclick = function () {
     renderLightGraph("today").then(r => null);
 }
-
-
+weekLightButton.onclick = function () {
+    renderLightGraph("week").then(r => null);
+}
 monthLightButton.onclick = function () {
     renderLightGraph("month").then(r => null);
 }

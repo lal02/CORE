@@ -12,7 +12,4 @@ public interface TemperatureRepository extends JpaRepository<TemperatureModel, L
     List<TemperatureModel> findTemperatureModelsByTimestampBetween(LocalDateTime startOfDay, LocalDateTime endOfDay);
 
 
-    //List<TemperatureModel> findTemperatureModelsByTimestampBetween(LocalDateTime startOfDay,LocalDateTime endOfDay);
-
-
 }
