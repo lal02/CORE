@@ -94,10 +94,12 @@ async function renderTempGraph(time){
 
     const temperatureLabels = temperatureData.map(data => new Date(data.timestamp).toLocaleString()); // Konvertiert den Timestamp in ein Datum
     const temperatureYValues = temperatureData.map(data => data.value);
-
+    if(time === "today"){
+        for (let key in temperatureLabels) {
+            temperatureLabels[key] = temperatureLabels[key].substring(temperatureLabels[key].length - 8);        }
+    }
     const humidityData = await fetchData("/api/humidity/" + time);
     humidityData.sort((a,b)=>new Date(a.timestamp)- new Date(b.timestamp));
-    const humidityLabels = humidityData.map(data => new Date(data.timestamp).toLocaleString());
     const humidityYValues = humidityData.map(data => data.value);
 
     if (humTempGraph) {
@@ -142,7 +144,10 @@ async function renderSoilGraph(time){
 
     const soilHumidityLabels = soilhumiditydata.map(data => new Date(data.timestamp).toLocaleString()); // Konvertiert den Timestamp in ein Datum
     const soilHumidityYValues = soilhumiditydata.map(data => data.value);
-
+    if(time === "today"){
+        for (let key in soilHumidityLabels) {
+            soilHumidityLabels[key] = soilHumidityLabels[key].substring(soilHumidityLabels[key].length - 8);        }
+    }
     if (soilHumGraph) {
         // Update existing chart
         soilHumGraph.data.labels = soilHumidityLabels;
@@ -157,8 +162,8 @@ async function renderSoilGraph(time){
                 datasets: [{
                     label: 'Soil Humidity',
                     data: soilHumidityYValues, // Y-Achsen-Werte
-                    backgroundColor: 'rgba(255, 0, 0, 0.2)',
-                    borderColor: 'rgba(255, 0, 0, 1)',
+                    backgroundColor: 'rgb(100,65,23,0.2)',
+                    borderColor: 'rgb(100,65,23,1)',
                     borderWidth: 1
                 }]
             }
@@ -175,6 +180,11 @@ async function renderLightGraph(time){
     const lightLabels = lightdata.map(data => new Date(data.timestamp).toLocaleString()); // Konvertiert den Timestamp in ein Datum
     const lightYValues = lightdata.map(data => data.value);
 
+    if(time === "today"){
+        for (let lightLabelsKey in lightLabels) {
+            lightLabels[lightLabelsKey] = lightLabels[lightLabelsKey].substring(lightLabels[lightLabelsKey].length - 8);        }
+    }
+
     if (lightSensorGraph) {
         // Update existing chart
         lightSensorGraph.data.labels = lightLabels;
@@ -189,8 +199,8 @@ async function renderLightGraph(time){
                 datasets: [{
                     label: 'Lux',
                     data: lightYValues, // Y-Achsen-Werte
-                    backgroundColor: 'rgba(255, 0, 0, 0.2)',
-                    borderColor: 'rgba(255, 0, 0, 1)',
+                    backgroundColor: 'rgb(240,230,140,0.2)',
+                    borderColor: 'rgb(240,230,140,1)',
                     borderWidth: 1
                 }]
             }

@@ -8,20 +8,35 @@
 <body>
 <div class="header">
     <div class = "headerButtonBar">
+        <h1 style="text-align: center" >Einheiten Konvertierer</h1>
+
         <button onclick = "location.href='/'">Home</button>
-        <button onclick = "location.href='/sensordata'">Sensor Data</button>
+        <button onclick = "location.href='/sensordata'">Sensordaten</button>
+        <button onclick = "location.href='/rezepte'">Rezepte</button>
         <div class="dropdown">
             <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png" alt = "icon" ></button>
             <div class = "dropdownContent">
-                <button onclick = "location.href='/tools/converter'" >Currency Converter</button>
+                <button onclick = "location.href='/tools/converter'" >Einheiten Konvertierer</button>
                 <button onclick = "location.href='/tools/finanzrechner'">Finanzrechner</button>
                 <button onclick = "location.href='/tools/finnishconjugation'">Finnish Conjugation</button>
-                <button onclick = "location.href='/tools/gamescalculator'">Games Calculator</button>
-                <button onclick = "location.href='/tools/passwordgenerator'">Password Generator</button>
+                <button onclick = "location.href='/tools/gamescalculator'">Spielerechner</button>
+                <button onclick = "location.href='/tools/passwordgenerator'">Passwort Generator</button>
+                <button onclick = "location.href='/tools/counter'">Textanalyse</button>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="mediaButton">Medien <img src = "/images/down_arrow.png" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='/media/booktemplate'">Bücher</button>
+                <button onclick = "location.href='/media/gametemplate'">Spiele</button>
+                <button onclick = "location.href='/media/movietemplate'">Filme und Serien</button>
             </div>
         </div>
     </div>
-    <h1>Converter</h1>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
 <footer class ="footer">
@@ -34,7 +49,5 @@
 
 
 <script src=/js/converter.js></script>
-<link rel="stylesheet" href="/css/tools/converter.css">
-<link rel="stylesheet" href="/css/header.css">
-<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/general.css">
 </html>

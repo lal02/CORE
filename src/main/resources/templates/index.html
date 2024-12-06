@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="de">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -7,37 +7,38 @@
 <body>
 <div class="header">
     <div class = "headerButtonBar">
+        <h1 style="text-align: center" >CORE APPLICATION</h1>
+
         <button onclick = "location.href='/'">Home</button>
-        <button onclick = "location.href='/sensordata'">Sensor Data</button>
+        <button onclick = "location.href='/sensordata'">Sensordaten</button>
+        <button onclick = "location.href='/rezepte'">Rezepte</button>
         <div class="dropdown">
             <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png" alt = "icon" ></button>
             <div class = "dropdownContent">
-                <button onclick = "location.href='/tools/converter'" >Currency Converter</button>
+                <button onclick = "location.href='/tools/converter'" >Einheiten Konvertierer</button>
                 <button onclick = "location.href='/tools/finanzrechner'">Finanzrechner</button>
                 <button onclick = "location.href='/tools/finnishconjugation'">Finnish Conjugation</button>
-                <button onclick = "location.href='/tools/gamescalculator'">Games Calculator</button>
-                <button onclick = "location.href='/tools/passwordgenerator'">Password Generator</button>
+                <button onclick = "location.href='/tools/gamescalculator'">Spielerechner</button>
+                <button onclick = "location.href='/tools/passwordgenerator'">Passwort Generator</button>
+                <button onclick = "location.href='/tools/counter'">Textanalyse</button>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="mediaButton">Medien <img src = "/images/down_arrow.png" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='/media/booktemplate'">Bücher</button>
+                <button onclick = "location.href='/media/gametemplate'">Spiele</button>
+                <button onclick = "location.href='/media/movietemplate'">Filme und Serien</button>
             </div>
         </div>
     </div>
-    <h1 style="text-align: center" >CORE APPLICATION</h1>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
-<nav>
-    <ul>
-        <li><a th:href="@{/tools/finanzrechner}">Finanzrechner</a></li>
-        <li><a th:href="@{/tools/converter}">Converter</a></li>
-        <li><a th:href="@{/wordstorage}">Word Storage</a></li>
-        <li><a th:href="@{/tools/finnishconjugation}">Finnish Conjugation</a></li>
-        <li><a th:href="@{/sensordata}">Sensor Data</a></li>
-        <li><a th:href="@{/rezepte}">Rezepte</a></li>
 
-    </ul>
-</nav>
-<div class = "coreImage">
-
-
-</div>
 
 
 <footer class ="footer">
@@ -49,7 +50,5 @@
 
 </body>
 
-<link rel="stylesheet" href="/css/index.css">
-<link rel="stylesheet" href="/css/header.css">
-<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/general.css">
 </html>

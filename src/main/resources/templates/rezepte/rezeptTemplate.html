@@ -5,7 +5,41 @@
     <title>Title</title>
 </head>
 <body>
-<h1 th:text="${rezept.getName()}">Rezept Name</h1>
+
+<div class="header">
+    <div class = "headerButtonBar">
+        <h1 style="text-align: center" >CORE APPLICATION</h1>
+
+        <button onclick = "location.href='/'">Home</button>
+        <button onclick = "location.href='/sensordata'">Sensordaten</button>
+        <button onclick = "location.href='/rezepte'">Rezepte</button>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='/tools/converter'" >Einheiten Konvertierer</button>
+                <button onclick = "location.href='/tools/finanzrechner'">Finanzrechner</button>
+                <button onclick = "location.href='/tools/finnishconjugation'">Finnish Conjugation</button>
+                <button onclick = "location.href='/tools/gamescalculator'">Spielerechner</button>
+                <button onclick = "location.href='/tools/passwordgenerator'">Passwort Generator</button>
+                <button onclick = "location.href='/tools/counter'">Textanalyse</button>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="mediaButton">Medien <img src = "/images/down_arrow.png" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='/media/booktemplate'">Bücher</button>
+                <button onclick = "location.href='/media/gametemplate'">Spiele</button>
+                <button onclick = "location.href='/media/movietemplate'">Filme und Serien</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+<h1 th:text="${rezept.getName()}"></h1>
 
 <h3>Tags</h3>
 <p th:text ="${rezept.getTagsAsString()}"></p>
@@ -28,4 +62,6 @@
 
 
 </body>
+<link rel="stylesheet" href="/css/general.css">
+
 </html>

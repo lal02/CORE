@@ -6,22 +6,36 @@
 <body>
 <div class="header">
     <div class = "headerButtonBar">
+        <h1 style="text-align: center" >Rezepte</h1>
+
         <button onclick = "location.href='/'">Home</button>
-        <button onclick = "location.href='/sensordata'">Sensor Data</button>
+        <button onclick = "location.href='/sensordata'">Sensordaten</button>
+        <button onclick = "location.href='/rezepte'">Rezepte</button>
         <div class="dropdown">
             <button class = "dropdownHoverButton" id="toolsButton">Tools <img src = "/images/down_arrow.png" alt = "icon" ></button>
             <div class = "dropdownContent">
-                <button onclick = "location.href='/tools/converter'" >Currency Converter</button>
+                <button onclick = "location.href='/tools/converter'" >Einheiten Konvertierer</button>
                 <button onclick = "location.href='/tools/finanzrechner'">Finanzrechner</button>
                 <button onclick = "location.href='/tools/finnishconjugation'">Finnish Conjugation</button>
-                <button onclick = "location.href='/tools/gamescalculator'">Games Calculator</button>
-                <button onclick = "location.href='/tools/passwordgenerator'">Password Generator</button>
+                <button onclick = "location.href='/tools/gamescalculator'">Spielerechner</button>
+                <button onclick = "location.href='/tools/passwordgenerator'">Passwort Generator</button>
+                <button onclick = "location.href='/tools/counter'">Textanalyse</button>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class = "dropdownHoverButton" id="mediaButton">Medien <img src = "/images/down_arrow.png" alt = "icon" ></button>
+            <div class = "dropdownContent">
+                <button onclick = "location.href='/media/booktemplate'">Bücher</button>
+                <button onclick = "location.href='/media/gametemplate'">Spiele</button>
+                <button onclick = "location.href='/media/movietemplate'">Filme und Serien</button>
             </div>
         </div>
     </div>
-    <h1 style="text-align: center">Rezepte</h1>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
-
 
 <ul>
     <li th:each="RezeptModel : ${rezeptList}">
@@ -30,8 +44,15 @@
 </ul>
 
 
+
+<footer class ="footer">
+    <p>Author: Lukas Albrecht</p>
+    <p>Software Engineer, Studying B.Sc. Computer Science</p>
+    <a href="mailto:lukas.albrecht-coding@web.de">Mail Contact</a>
+    <a href="https://github.com/lal02">Github</a>
+</footer>
+
 </body>
-<link rel="stylesheet" href="/css/rezepte.css">
-<link rel="stylesheet" href="/css/header.css">
-<link rel="stylesheet" href="/css/footer.css">
+
+<link rel="stylesheet" href="/css/general.css">
 </html>
