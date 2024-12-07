@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.lalbr</groupId>
 	<artifactId>CORE</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.1</version>
 	<name>CORE</name>
-	<description>my personal website that contains certain tools and other stuff I use often</description>
+	<description>my personal website that contains sensordata, certain tools and other stuff I use often</description>
 	<url/>
 	<licenses>
 		<license/>
