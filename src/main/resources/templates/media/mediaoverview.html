@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    <li th:each="model : ${booklist}">
+        <a th:href="@{/book/{id}(id=${model.getTitle()})}" th:text="${model.getTitle() + ' - ' + model.getAuthor()}">Item Name</a>
+    </li>
+</ul>
+
+</body>
+</html>

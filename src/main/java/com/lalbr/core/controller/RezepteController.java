@@ -26,9 +26,6 @@ public class RezepteController {
     @GetMapping(value={"/rezepte","/Rezepte","/rezept","/Rezept","/rezepte/","/Rezepte"})
     public String rezeptOverviewGetMapping(Model model){
         List<RezeptModel> list = rezeptService.findAllRezeptModel();
-        list.forEach(e -> System.out.println(e.getName()));
-        List<Ingredient> list2 = rezeptService.findAllIngredientModel();
-        list2.forEach(e -> System.out.println(e.getId()));
         model.addAttribute("rezeptList",list);
         return "rezepte/rezepte";
     }
