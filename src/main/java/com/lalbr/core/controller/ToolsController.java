@@ -30,6 +30,11 @@ public class ToolsController {
         return "/tools/passwordgenerator";
     }
 
+    @GetMapping("/tools/counter")
+    public String counterGetMapping(){
+        return "/tools/counter";
+    }
+
 
 
 }

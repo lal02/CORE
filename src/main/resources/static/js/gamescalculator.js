@@ -16,7 +16,7 @@ function calculateRemainingTime(days,hours,minutes){
     let remainingSeconds;
     console.log("remaining time in minutes before boost: " + remainingTime);
 
-    let workDuringBoost = 660;
+    let workDuringBoost = 600;
     remainingTime = remainingTime-workDuringBoost;
 
     // wird während dem Boost fertig

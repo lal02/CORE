@@ -28,6 +28,10 @@ public class  SensorDataController {
     @PostMapping("/humidity")
     public ResponseEntity<HumidityModel> createMyModel(@RequestBody HumidityModel myModel) {
         HumidityModel savedModel = sensorDataService.saveHumidityModel(myModel);
+        if(savedModel.getValue()>75){
+            //send mail TODO
+            System.out.println("lüften");
+        }
         return ResponseEntity.ok(savedModel); // Return the saved model
     }
 

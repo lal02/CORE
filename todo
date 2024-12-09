@@ -1,16 +1,13 @@
 Ideas:
-verlinkungen zu sachen footer wie bei index.html
-projekte page mit doku/vorstellung
+email senden
+Create pages für Rezepte, Bücher, Filme und Spiele
 pw generator
 todoliste
 einkaufsliste
-Rezepte dynamisch generieren lassen anhand von thymeleaf template und nur die Daten in DB speichern
-Wetter?
-Einkaufsliste
-Todoliste
-Bücher Filme und Serien
+Home-Dashboard mit Verlinkungen zu Sachen, Wetter von verschiedenen Orten, aktuellste Datenmessungen, etc
+projekte page mit doku/vorstellung
+
 deepl wrapper word saver
-line char counter etc
 led panel controller
 Sensordaten Filter für Tag X und Zeitraum zwischen X und Y eingabemöglichkeit
 
