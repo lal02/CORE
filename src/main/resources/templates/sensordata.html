@@ -24,6 +24,7 @@
                 <button onclick = "location.href='/tools/gamescalculator'">Spielerechner</button>
                 <button onclick = "location.href='/tools/passwordgenerator'">Passwort Generator</button>
                 <button onclick = "location.href='/tools/counter'">Textanalyse</button>
+                <button onclick = "location.href=('http://10.0.10.221:8080')">pdf Tools</button>
             </div>
         </div>
         <div class="dropdown">
@@ -38,56 +39,84 @@
     <h2 style="text-align: center">Sensordaten</h2>
 </div>
 
-<div class = "sensorDataTimeSelection">
-    <h3>Temperatur und Luftfeuchtigkeit</h3>
-    <button id = "todayButton">Heute</button>
-    <button id = "weekButton">Woche</button>
-    <button id = "monthButton">Monat</button>
-    <button id = "yearButton">Jahr</button>
-    <button id = "alltimeButton">Gesamt</button>
+<div class ="graphDivRow">
+    <div class = "temperatureDiv">
+        <div class = "sensorDataTimeSelection">
+            <h3>Temperatur und Luftfeuchtigkeit</h3>
+            <button id = "todayButton">Heute</button>
+            <button id = "weekButton">Woche</button>
+            <button id = "monthButton">Monat</button>
+            <button id = "yearButton">Jahr</button>
+            <button id = "alltimeButton">Gesamt</button>
+        </div>
+        <div class = "graphDiv">
+            <canvas id="temperatureGraph" width="700" height="400"></canvas>
+        </div>
+    </div>
+
+    <div class ="soilDiv">
+        <div class = "sensorDataTimeSelection">
+            <h3>Pflanzen Bodenfeuchtigkeit</h3>
+            <button id = "todaySoilButton">Heute</button>
+            <button id = "weekSoilButton">Woche</button>
+            <button id = "monthSoilButton">Monat</button>
+            <button id = "yearSoilButton">Jahr</button>
+            <button id = "alltimeSoilButton">Gesamt</button>
+        </div>
+
+        <div class = "graphDiv">
+            <canvas id="soilGraph" width="700" height="400"></canvas>
+        </div>
+    </div>
 </div>
 
 
-<div class = "graphDiv">
-    <canvas id="temperatureGraph" width="700" height="400"></canvas>
-</div>
+
+
+
 <br>
 <br>
 <br>
 <br>
 <!--  <label for="start">Start</label> <br> -->
 <!-- <input id = "start" type="date"> -->
-<div class = "sensorDataTimeSelection">
-    <h3>Pflanzen Bodenfeuchtigkeit</h3>
-    <button id = "todaySoilButton">Heute</button>
-    <button id = "weekSoilButton">Woche</button>
-    <button id = "monthSoilButton">Monat</button>
-    <button id = "yearSoilButton">Jahr</button>
-    <button id = "alltimeSoilButton">Gesamt</button>
-</div>
-<div class = "graphDiv">
-    <canvas id="soilGraph" width="700" height="400"></canvas>
-</div>
-<br>
-<br>
-<br>
-<br>
-<div class = "sensorDataTimeSelection">
-    <h3>Helligkeit</h3>
-    <button id = "todayLightButton">Heute</button>
-    <button id = "weekLightButton">Woche</button>
-    <button id = "monthLightButton">Monat</button>
-    <button id = "yearLightButton">Jahr</button>
-    <button id = "alltimeLightButton">Gesamt</button>
-</div>
 
-<div class = "graphDiv">
-    <canvas id="lightGraph" width="700" height="400"></canvas>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class ="graphDivRow">
+    <div class ="lightDiv">
+        <div class = "sensorDataTimeSelection">
+            <h3>Helligkeit</h3>
+            <button id = "todayLightButton">Heute</button>
+            <button id = "weekLightButton">Woche</button>
+            <button id = "monthLightButton">Monat</button>
+            <button id = "yearLightButton">Jahr</button>
+            <button id = "alltimeLightButton">Gesamt</button>
+        </div>
+        <div class = "graphDiv">
+            <canvas id="lightGraph" width="700" height="400"></canvas>
+        </div>
+    </div>
+
+    <div class ="airDiv">
+        <div class = "sensorDataTimeSelection">
+            <h3>Allgemeine Luftqualität und Kohlenstoffmonoxid</h3>
+            <button id = "todayAQButton">Heute</button>
+            <button id = "weekAQButton">Woche</button>
+            <button id = "monthAQButton">Monat</button>
+            <button id = "yearAQButton">Jahr</button>
+            <button id = "alltimeAQButton">Gesamt</button>
+        </div>
+
+        <div class = "graphDiv">
+            <canvas id="AQGraph" width="700" height="400"></canvas>
+        </div>
+    </div>
 </div>
-<br>
-<br>
-<br>
-<br>
 
 <footer class ="footer">
     <p>Author: Lukas Albrecht</p>

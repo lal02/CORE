@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Buchdetails</title>
 </head>
 <body>
 
 
-<p th:text ="${book.getTitle()}"></p>
-<p th:text ="${'Author: ' + book.getAuthor()}"></p>
-<p th:text ="${book.getTitle()}"></p>
-<p th:text ="${book.getTitle()}"></p>
-<p th:text ="${book.getTitle()}"></p>
+<p th:text ="${'Titel: ' + book.getTitle()}"></p>
+<p th:text ="${'Autor: ' + book.getAuthor()}"></p>
+<p th:text ="${'Teil von Buchserie: ' + book.getBookSeriesModel().getTitle()}"></p>
+<p th:text ="${'Position in Buchserie: ' + book.getPlaceInSeries()}"></p>
+<p th:text ="${'Genre von Buchserie: ' + book.getBookSeriesModel().getGenre()}"></p>
+<p th:text ="${'SubGenre von Buchserie: ' + book.getBookSeriesModel().getSubgenre()}"></p>
+<p th:text ="${'Vorhanden in: ' + book.getLanguage()}"></p>
+<p th:text ="${'Seitenzahl: ' + book.getPages()}"></p>
+<p th:text ="${'Bereits gelesen: ' + book.getReadAsString()}"></p>
+<p th:text ="${'Buchformat: ' + book.getFormat()}"></p>
 
 
 </body>

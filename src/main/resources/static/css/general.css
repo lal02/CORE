@@ -53,6 +53,8 @@ DROPDOWN BUTTON
     border-top: 1px solid black;
     padding-top: 10px;
     align-content: center;
+    width: 100%;
+    margin-top: 50px;
 }
 
 
@@ -66,4 +68,5 @@ body{
     background-color: #11243a;
     color:lightgrey;
 }
+
 

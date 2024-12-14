@@ -6,9 +6,30 @@
 </head>
 <body>
 
+<p>Bücher</p>
 <ul>
     <li th:each="model : ${booklist}">
         <a th:href="@{/book/{id}(id=${model.getTitle()})}" th:text="${model.getTitle() + ' - ' + model.getAuthor()}">Item Name</a>
+    </li>
+</ul>
+
+<p>Bookseries</p>
+<ul>
+    <li th:each="model : ${bookserieslist}">
+        <a th:href="@{/bookseries/{id}(id=${model.getTitle()})}" th:text="${model.getTitle()}">Item Name</a>
+    </li>
+</ul>
+
+<p>Games</p>
+<ul>
+    <li th:each="model : ${gameslist}">
+        <a th:href="@{/game/{id}(id=${model.getTitle()})}" th:text="${model.getTitle()}">Item Name</a>
+    </li>
+</ul>
+<p>Serien und Filme</p>
+<ul>
+    <li th:each="model : ${movielist}">
+        <a th:href="@{/movie/{id}(id=${model.getTitle()})}" th:text="${model.getTitle()}">Item Name</a>
     </li>
 </ul>
 

@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Gamedetails</title>
 </head>
 <body>
+<p th:text ="${'Titel: ' + game.getTitle()}"></p>
+<p th:text ="${'Genre: ' + game.getGameGenre()}"></p>
+<p th:text ="${'Subgenre: ' + game.getGameSubGenre()}"></p>
+<p th:text ="${'Gamestudio: ' + game.getGamestudio()}"></p>
+<p th:text ="${'Gehört zu Bucherie: ' + game.getBookSeriesModel()?.getTitle()?:''}"></p>
+<p th:text ="${'Platform: ' + game.getPlatform()}"></p>
+<p th:text ="${'Durchgespielt: ' + game.getBooleanAsString(game.isCompleted())}"></p>
+<p th:text ="${'Coop: ' + game.getBooleanAsString(game.isCoop())}"></p>
+<p th:text ="${'PVP: ' + game.getBooleanAsString(game.isPvp())}"></p>
+<p th:text ="${'Bereits released: ' + game.getBooleanAsString(game.isReleased())}"></p>
 
 </body>
 </html>

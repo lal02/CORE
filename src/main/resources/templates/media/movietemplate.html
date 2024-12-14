@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Film und Serien Details</title>
 </head>
 <body>
+<p th:text ="${'Titel: ' + movie.getTitle()}"></p>
+<p th:text ="${'Typ: ' + movie.getMovieType()}"></p>
+<p th:text ="${'Genre: ' + movie.getGenre()}"></p>
+<p th:text ="${'SubGenre: ' + movie.getSubgenre()}"></p>
+<p th:text ="${'Platform: ' + movie.getPlatform()}"></p>
+
+
 
 </body>
 </html>

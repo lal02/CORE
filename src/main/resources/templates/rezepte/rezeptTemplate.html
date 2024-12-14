@@ -22,6 +22,8 @@
                 <button onclick = "location.href='/tools/gamescalculator'">Spielerechner</button>
                 <button onclick = "location.href='/tools/passwordgenerator'">Passwort Generator</button>
                 <button onclick = "location.href='/tools/counter'">Textanalyse</button>
+                <button onclick = "location.href=('http://10.0.10.221:8080')">pdf Tools</button>
+
             </div>
         </div>
         <div class="dropdown">
@@ -44,7 +46,7 @@
 <p th:text ="${rezept.getCategoryAsString()}"></p>
 
 <h3>Dauer</h3>
-<p th:text ="${rezept.getDuration().getName()}"></p>
+<p th:text ="${rezept.getDuration()}"></p>
 
 <h3>Zutaten</h3>
 <p th:utext ="${rezept.getIngredientsAsString()}"></p>
