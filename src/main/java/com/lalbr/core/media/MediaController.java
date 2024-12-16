@@ -12,53 +12,69 @@ public class MediaController {
     @Autowired
     MediaService mediaservice;
 
-    // MEDIA OVERVIEW
-    @GetMapping("/books")
-    public String bookGetMapping(Model model){
+    /*
+        Overview Mappings
+     */
+    @GetMapping("/media/overview")
+    public String overviewGetMapping(Model model){
         model.addAttribute("booklist", mediaservice.findAllBookModel());
         model.addAttribute("bookserieslist",mediaservice.findAllBookSeriesModel());
         model.addAttribute("gameslist",mediaservice.findAllGameModel());
         model.addAttribute("movielist",mediaservice.findAllMovieModel());
-        return "media/mediaoverview";
+        return "media/overview/mediaoverview";
     }
 
-    @GetMapping(value = {"/book/{name}","/Book/{name}"})
-    public String bookTemplateGetMapping(@PathVariable String name, Model model){
-        model.addAttribute("book",mediaservice.findBookModelByTitle(name));
-        return "/media/booktemplate";
+    @GetMapping("/books")
+    public String bookGetMapping(Model model){
+        model.addAttribute("booklist", mediaservice.findAllBookModel());
+        return "media/overview/bookoverview";
     }
 
     @GetMapping("/bookseries")
     public String bookseriesGetMapping(Model model){
-        model.addAttribute("bookseries", mediaservice.findAllBookSeriesModel());
-        return "media/mediaoverview";
+        model.addAttribute("bookserieslist", mediaservice.findAllBookSeriesModel());
+        return "media/overview/bookseriesoverview";
     }
 
-    @GetMapping(value = {"/bookseries/{name}","/Bookseries/{name}"})
-    public String bookSeriesTemplateGetMapping(@PathVariable String name, Model model){
-        model.addAttribute("bookseries",mediaservice.findBookSeriesModelByTitle(name));
-        return "/media/bookseriestemplate";
-    }
-
-    @GetMapping("/game")
-    public String gamesGetMapping(){
-        return "media/gametemplate";
-    }
-
-    @GetMapping(value = {"/game/{name}","/Game/{name}"})
-    public String gamesTemplateGetMapping(@PathVariable String name, Model model){
-        model.addAttribute("game",mediaservice.findGameModelByTitle(name));
-        return "/media/gametemplate";
+    @GetMapping("/games")
+    public String gamesGetMapping(Model model){
+        model.addAttribute("gameslist",mediaservice.findAllGameModel());
+        return "media/overview/gameoverview";
     }
 
     @GetMapping("/movies")
-    public String moviesGetMapping(){
-        return "media/movietemplate";
+    public String moviesGetMapping(Model model){
+        model.addAttribute("movielist",mediaservice.findAllMovieModel());
+        return "media/overview/movieoverview";
+    }
+
+
+
+    /*
+        Detail templates
+     */
+
+    @GetMapping(value = {"/book/{name}","/Book/{name}"})
+    public String bookTemplateGetMapping(@PathVariable String name, Model model){
+        model.addAttribute("book",mediaservice.findBookModelByTitle(name));
+        return "/media/detailtemplates/booktemplate";
     }
 
     @GetMapping(value = {"/movie/{name}","/Movie/{name}"})
     public String movieTemplateGetMapping(@PathVariable String name, Model model) {
         model.addAttribute("movie", mediaservice.findMovieModelByTitle(name));
-        return "/media/movietemplate";
+        return "/media/detailtemplates/movietemplate";
+    }
+
+    @GetMapping(value = {"/game/{name}","/Game/{name}"})
+    public String gamesTemplateGetMapping(@PathVariable String name, Model model){
+        model.addAttribute("game",mediaservice.findGameModelByTitle(name));
+        return "/media/detailtemplates/gametemplate";
+    }
+
+    @GetMapping(value = {"/bookseries/{name}","/Bookseries/{name}"})
+    public String bookSeriesTemplateGetMapping(@PathVariable String name, Model model){
+        model.addAttribute("bookseries",mediaservice.findBookSeriesModelByTitle(name));
+        return "/media/detailtemplates/bookseriestemplate";
     }
 }

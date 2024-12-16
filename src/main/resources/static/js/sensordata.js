@@ -120,7 +120,8 @@ async function renderTempGraph(time){
     const temperatureYValues = temperatureData.map(data => data.value);
     if(time === "today"){
         for (let key in temperatureLabels) {
-            temperatureLabels[key] = temperatureLabels[key].substring(temperatureLabels[key].length - 8);        }
+            temperatureLabels[key] = temperatureLabels[key].substring(temperatureLabels[key].length - 8);
+        }
     }
     const humidityData = await fetchData("/api/humidity/" + time);
     humidityData.sort((a,b)=>new Date(a.timestamp)- new Date(b.timestamp));
@@ -182,7 +183,6 @@ async function renderSoilGraph(time){
     if(time === "today"){
         for (let key in soilHumidityLabels0) {
             soilHumidityLabels0[key] = soilHumidityLabels0[key].substring(soilHumidityLabels0[key].length - 8);
-            soilHumidityLabels1[key] = soilHumidityLabels1[key].substring(soilHumidityLabels1[key].length - 8);
         }
     }
     if (soilgraphnew) {

@@ -29,12 +29,18 @@
         <div class="dropdown">
             <button class = "dropdownHoverButton" id="mediaButton">Medien <img src = "/images/down_arrow.png" alt = "icon" ></button>
             <div class = "dropdownContent">
+                <button onclick = "location.href='/media/overview'">Übersicht</button>
+                <button onclick = "location.href='/bookseries'">Buchserien</button>
                 <button onclick = "location.href='/books'">Bücher</button>
                 <button onclick = "location.href='/games'">Spiele</button>
                 <button onclick = "location.href='/movies'">Filme und Serien</button>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
 <h1 th:text="${rezept.getName()}"></h1>
@@ -58,6 +64,13 @@
 <h3>Beschreibung</h3>
 <p th:text="${rezept.getDescription()}">Beschreibung</p>
 
+
+<footer class ="footer">
+    <p>Author: Lukas Albrecht</p>
+    <p>Software Engineer, Studying B.Sc. Computer Science</p>
+    <a href="mailto:lukas.albrecht-coding@web.de">Mail Contact</a>
+    <a href="https://github.com/lal02">Github</a>
+</footer>
 
 </body>
 <link rel="stylesheet" href="/css/general.css">
