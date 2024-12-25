@@ -5,26 +5,12 @@ pw generator
 todoliste
 einkaufsliste
 Home-Dashboard mit Verlinkungen zu Sachen, Wetter von verschiedenen Orten, aktuellste Datenmessungen, etc
-projekte page mit doku/vorstellung
 
 deepl wrapper word saver
 led panel controller
-Sensordaten Filter für Tag X und Zeitraum zwischen X und Y eingabemöglichkeit
 
 
-DB,Services,Model etc alles refactoren
------------------------------------------------------------------
-
-Rezepte:
-
-String Rezeptname
-String Anleitung
-Tags[]: Kochen/Backen/Frühstück/.../Festlich/
-Kategorie: mit Fleisch / ohne Fleisch / Backofen /
-Dauer: schnell lang mittel
-Zutaten[] (String name, String? Menge)
-
-erweitern mit:
+Rezepte erweitern mit:
 Image
 ergibt N portionen, gesamtkosten, kosten pro portion, Rezept erstellt am, Rezept Quelllink
 
