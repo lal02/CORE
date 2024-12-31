@@ -2,7 +2,7 @@ POST http://localhost:8080/soilhumidity
 Content-Type: application/json
 
 {
-  "value" : 55,
+  "value" : 1050,
   "timestamp": "2024-11-01T23:07:36",
   "sensorid" : 1
 }

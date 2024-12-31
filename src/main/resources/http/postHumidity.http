@@ -7,7 +7,7 @@ POST http://localhost:8080/humidity
 Content-Type: application/json
 
 {
-  "value" : 55.4,
+  "value" : 90,
   "timestamp": "2024-11-01T23:07:36"
 }
 
